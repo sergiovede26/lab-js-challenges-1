@@ -66,10 +66,15 @@ function filterOut(arr1, arr2) {
     } else if (arr2.length === 0) {
         return arr1;
     }
-     function isNot(item) {
-      return !arr2.includes(item);
-     }
-     return arr1.filter(isNot);
+      
+    let arrFiltered =  []
+
+    for(let i = 0;  i < arr1.length; i++) {
+      if(!arr2.includes[arr1[i]]) {
+        arrFiltered.push(arr1[i])
+      }
+    }
+    return arrFiltered;
 }
 
 console.log(filterOut(original,toRemove));
